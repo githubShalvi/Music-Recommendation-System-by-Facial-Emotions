@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<style>
+	body
+	{
+		background-image:url("music.jpg");
+        background-repeat: no-repeat;
+		background-size: cover;
+		background-attachment: fixed;
+		background-position: center;
+		
+   }
+
+   html{
+			font-size: 50%;
+		}
+
+		@media  screen and(max-width:500px) {
+			html{
+				font-size: 25%;
+			}
+			
+		}
+		@media  screen and(max-width:300px) {
+			html{
+				font-size: 5%;
+			}
+			
+		}
+	</style>
+	<title>Sad mood</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}">
+
+</head>
+
+
+<body>
+	<div class="results1" >
+	<p style="color:rgb(0, 0, 0);font-size:20;text-align: center;"><b> Recommended Songs... </b></p>
+   
+   </div>
+	<div class="results2" >
+
+
+  <center>
+    <h3>Sad songs here..</h3>
+    <h2> Song1
+   <audio controls>
+   <source src='s1.mp3' type="audio/wav"></audio></h2><br><br>
+   
+    <h2> Song2
+   <audio controls>
+   <source src='s2.wav' type="audio/wav"></audio></h2><br><br>
+   
+    <h2> Song3
+   <audio controls>
+   <source src='s3.wav' type="audio/wav"></audio></h2><br><br>
+   
+    <h2> Song4
+   <audio controls>
+   <source src='s4.wav' type="audio/wav"></audio></h2><br><br>
+   <br>
+   <br>
+   <br>	
+	
+  
+  </center>
+
+</div>
+
+</body>
+</html>

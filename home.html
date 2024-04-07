@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<style>
+	body{
+		
+		background-image: url("2.jpg");
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-attachment: fixed;
+		background-position: center;
+		}
+	
+	span 
+	{
+	 font-family:Verdana, Geneva, Tahoma, sans-serif;
+    }
+	</style>
+
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Music Recommandation</title>
+	<!-- <link rel="stylesheet" type="text/css" href="../static/css/styles.css"> -->
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}">
+	<link rel="stylesheet" href="button.css"/>
+	<script src="https://kit.fontawesome.com/314b761ea4.js" crossorigin="anonymous"></script>
+    <style>
+		html{
+			font-size: 50%;
+		}
+
+		@media  screen and(max-width:500px) {
+			html{
+				font-size: 25%;
+			}
+			
+		}
+		@media  screen and(max-width:300px) {
+			html{
+				font-size: 5%;
+			}
+			
+		}
+	</style>
+
+	
+</head>
+<body>
+     <div class="box">
+    <py-script src="program.py">
+
+	</py-script>
+	<header>
+		<div class="container" style="background-color: aliceblue; opacity: 1; box-shadow: 5px 5px black; border-radius: 1rem; margin-top: 10%; margin-right: 2%; margin-left: 2%; padding-top: 2%; padding-right: 1%; font-size: 2rem; font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">
+		
+		<div id="brandname"> <center><h1 style="color:rgb(0, 0, 0);">
+			<span>MUSIC RECOMMENDATION BASED ON USER'S EMOTION</span></h1></center>
+		</div><br><br>
+		
+		
+	</div>
+	</header>
+
+	<div class="ml-container" style="background-color: aliceblue; opacity: 1;box-shadow: 5px 5px black; padding-bottom:4%; border-radius: 1rem; margin-top: 2%;margin-bottom: 4%;  margin-left: 20%; margin-right: 20%;  font-size: 2rem; font-family:'Courier New', Courier, monospace;">
+
+		<br><br>
+		<center>
+			<h1 style="color:rgb(0, 0, 0);"><span>Enter the Emotion</span></h1>
+		</center>
+		<br/>
+        <div class="mood">
+		<div class="button">
+			<center>
+				<div class="new" style="list-style: none; justify-content: space-between; ">
+				<li><i class="fa-solid fa-face-smile" style="color: rgb(233, 20, 69);"></i> Happy</li>
+				<li><i class="fa-solid fa-face-frown" style="color: rgb(10, 85, 122);"></i> Sad</li>
+		    	<li><i class="fa-solid fa-face-grin-hearts" style="color:rgb(233, 20, 69) ;"></i> Romantic</li>
+				<li><i class="fa-solid fa-face-angry" style="color: rgb(10, 85, 122);"></i> Angry</li>
+				</div>
+				<br>
+				<br>
+				
+				<input  onclick="message1()" type="text" style="font-size: 10px;" id="name"/>
+				
+				<br>
+				<button onclick="message()" style="box-shadow: 0 0 5px rgb(0, 0, 0);background-color:rgb(96, 210, 96); 
+				border-radius: 8px; padding: 10px;margin-top: 10px; font-weight: bold;" class="btn btn1" >RECOMMEND</button>
+			</center>
+        </div>
+		
+		</div>
+		
+		
+		
+
+		<!--<center><input type="submit" class="btn-info" value="RECOMMEND"></center>-->
+		
+	</form>
+		
+	</div>
+</div>
+
+<script>
+	function message(){
+		var data = document.getElementById("name").value;
+		if(data==""){
+			alert("We need to know your emotions first :)");
+		}
+		else if(data=="sad"){
+			window.location=" https://dazzling-liger-e0a21a.netlify.app/ ";
+		}
+		else if(data=="happy" ){
+            window.location="https://snazzy-ganache-ecbb87.netlify.app/";
+		}
+		else if(data=="angry" ){
+            window.location="https://beamish-lokum-54c49d.netlify.app/";
+		}
+		else if(data=="romantic" ){
+            window.location="https://quiet-duckanoo-f74e6c.netlify.app/";
+		}
+		else{
+			alert("Enter valid emotion!");
+		}
+		
+	}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,67 @@
+.btn{
+    background: none;
+    border: 2px solid #000;
+    padding: 12px 20px;
+    cursor: pointer;
+    transition: color 0.1s linear;
+
+}
+.btn:hover{
+    color: #ffffff;
+    background-color: green;
+    transform:translateY(-5px);
+
+}
+.btn::before{
+    content:" ";
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: #000;
+    z-index: -1;
+    transition: transform 0.5s ;
+    transform-origin:0 0 ;
+    transition-timing-function: cubic-bezier(0.5, 1.6, 0.4, 0.7);
+
+}
+.btn1::before{
+    transform: scaleX(0);
+
+}
+.btn1:hover::before{
+    transform: scaleX(1);
+}
+
+.message{
+    width: 100%;
+    position: relative;
+    margin-bottom: 60px;
+    display: flex;
+    justify-content: center;
+}
+.message .success{
+    font-size: 20px;
+    color: green;
+    position: absolute;
+    animation: buttons .3s linear;
+    display: none;
+}
+.message .danger{
+    font-size: 20px;
+    color: rgb(243, 104, 104);
+    position: absolute;
+    transition: .3s;
+    animation: buttons .3s linear;
+    display: none;
+}
+@keyframes buttons{
+    0%{
+        transform: scale(0.1);
+    }
+    50%{
+        transform: scale(0.5);
+    }
+    100%{
+        transform: scale(1);
+    }
+}

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<style>
+	body
+	{
+		background-image:url("music.jpg");
+    background-repeat: no-repeat;
+		background-size: cover;
+		background-attachment: fixed;
+		background-position: center;
+   }
+
+   
+   html{
+			font-size: 50%;
+		}
+
+		@media  screen and(max-width:500px) {
+			html{
+				font-size: 25%;
+			}
+			
+		}
+		@media  screen and(max-width:300px) {
+			html{
+				font-size: 5%;
+			}
+			
+		}
+	</style>
+	<title>Angry mood</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}">
+
+</head>
+
+
+<body>
+	<div style="background-color: rgb(182, 183, 184); opacity: 0.7; border-radius: 1rem; margin-top: 10px; margin-right: 25%; margin-left: 25%; padding-top: 10px; padding-bottom: 10px; padding-right: 1%; font-size: 30px; font-family:Verdana, Geneva, Tahoma, sans-serif; text-shadow: 2px 2px rgb(251, 251, 251);">
+	<p style="color:rgb(10, 10, 10);font-size:20;text-align: center;"><b> Recommended Songs... </b></p>
+   
+   </div>
+	<div class="results" style="background-color: rgb(182, 183, 184); opacity: 0.8; border-radius: 1rem; margin-top: 15px; margin-right: 25%; margin-left: 25%; padding-top: 5px; padding-right: 1%; font-size: 15px; font-family:Verdana, Geneva, Tahoma, sans-serif; text-shadow: 2px 2px rgb(251, 251, 251);">
+
+
+  <center>
+    
+    <h3>Angry songs here..</h3>
+    <h2> Song1 
+    <audio controls>
+    <source src='a1.mp3' type="audio/mp3"></audio></h2><br><br>
+    
+     <h2> Song2
+    <audio controls>
+    <source src='a2.mp3' type="audio/wav"></audio></h2><br></br>
+    <br>
+    <br>
+    <br>
+    
+    
+  </center>
+
+</div>
+
+</body>
+</html>
